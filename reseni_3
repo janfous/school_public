@@ -1,0 +1,3 @@
+touch "$HOME"/"$FILE";
+echo 'tento znak: " je uvozovka' > "$HOME"/"$FILE";
+chmod 654 "$HOME"/"$FILE"

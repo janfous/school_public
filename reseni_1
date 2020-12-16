@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+awk '{ if ( NR != 1 && NR != 5 && NR != 6 && NR != 7 && NR != 8 && NR != 9 && NR != 10 ) { print $0 } }' "$1" > edited;
+echo '*** Uredne zkraceno ***' >> edited;
+mv edited "$1";

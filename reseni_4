@@ -1,0 +1,4 @@
+awk -F: '{ print $3,$4 }' "$VYROBKY" > prices;
+awk '{ if ($2 == "EUR") { NUM=(($1 * 25)); $1 = NUM } print $1 }' prices > converted_prices;
+sort -n converted_prices | tail -1;
+rm prices converted_prices;

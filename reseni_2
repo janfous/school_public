@@ -1,0 +1,14 @@
+#!/bin/bash
+
+CNT=$#;
+
+if [ $CNT -ne 3 ];
+  then
+    printf "%s\n" "Spatny pocet parametru" 1>&2;
+    exit 2;
+fi;
+
+TOTAL=$(( ($1 + $2) * $3 ));
+
+printf "%d\n" $TOTAL;
+exit 0;
